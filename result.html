@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <br>
+    <div class="content">
+        {% for string in jsonString %}
+        <h2>The distance between the 2 cities is: </h2>
+        <br>
+        <h3>{{ string['first_value'] }} miles </h3>
+        <br>
+        <br>
+        <h2>The name of the train is: </h2>
+        <br>
+        <h3>{{ string['second_value'] }}</h3>
+        {% endfor %}
+        <br>
+    </div>
+</body>
+</html>

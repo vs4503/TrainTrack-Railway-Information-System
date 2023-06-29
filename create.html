@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Search For Train Details {% endblock %}</h1>
+    <form method="post">
+        <br>
+        <label for="start_station">Start Station</label>
+        <input type="text" name="start_station"
+               placeholder="Enter the start station"
+               value= "{{ request.form['start_station'] }}">
+        </input>
+        <br>
+        
+        <br>
+        <label for="destination">Destination</label>
+        <input type="text" name="destination"
+               placeholder="Enter the destination"
+               value= "{{ request.form['destination'] }}">
+        </input>
+        <br>
+        
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

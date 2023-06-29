@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Train Details {% endblock %}</h1>
+    {% for message in messages %}
+    <div class="message">
+        <h2> Start Station: </h2>
+        <br>
+        <h3>{{ message['start_station'] }}</h3>
+        <br>
+        <br>
+        <h2> Destination: </h2>
+        <br>
+        <h3>{{ message['destination'] }}</h3>
+        <br>
+        <br>
+    </div>
+    {% endfor %}
+{% endblock %}
